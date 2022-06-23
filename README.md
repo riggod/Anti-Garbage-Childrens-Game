@@ -73,6 +73,9 @@ o	Classification Types: Multiclass (single tag per image)
 o	Domains: General
 4.	In the new project, click [+] Add images, and select all of the files in the training-images/cardboard folder we viewed previously. Then upload the image files, specifying the tag cardborad, like this:
 
+![customvisioncard](https://user-images.githubusercontent.com/91531884/175301822-5feaf628-d906-469a-b6c2-8e0597b26c32.jpg)
+
+
  
 5.	Repeat the previous step to upload the images in the glass folder with the tag glass, and same with other folders too.
 6.	Explore the images we have uploaded in the Custom Vision project - there should be 15 images of each class, like this:
