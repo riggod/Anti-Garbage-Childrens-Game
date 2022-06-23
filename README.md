@@ -148,6 +148,7 @@ o	Namespaces from the package we installed are imported
 o	The Main function retrieves the configuration settings, and uses the key and endpoint to create an authenticated CustomVisionTrainingClient, which is then used with the project ID to create a Project reference to project.
 o	The Upload_Images function retrieves the tags that are defined in the Custom Vision project and then uploads image files from correspondingly named folders to the project, assigning the appropriate tag ID.
 o	The Train_Model function creates a new training iteration for the project and waits for training to complete.
+
 5.	Return the integrated terminal for the train-classifier folder, and enter the following command to run the program: "dotnet run"
 
 ![trainres](https://user-images.githubusercontent.com/91531884/175312247-a46253e0-b33a-432c-87c2-af563f462338.jpg)
