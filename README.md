@@ -194,6 +194,7 @@ Now that we've published the image classification model, we can use it from a cl
 o	Namespaces from the package we installed are imported
 o	The Main function retrieves the configuration settings, and uses the key and endpoint to create an authenticated CustomVisionPredictionClient.
 o	The prediction client object is used to predict a class for each image in the test-images folder, specifying the project ID and model name for each request. Each prediction includes a probability for each possible class, and only predicted tags with a probability greater than 50% are displayed.
+
 5.	Return the integrated terminal for the test-classifier folder, and enter the SDK-specific command to run the program: "dotnet run"
 
 ![restest](https://user-images.githubusercontent.com/91531884/175311565-cda02ab4-47a1-4155-a3b6-542621d10e63.jpg)
