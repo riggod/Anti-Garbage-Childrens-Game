@@ -49,6 +49,10 @@ In this demo, i will use the Custom Vision service to train an image classificat
 Before we can train a model, we will need Azure resources for training and prediction. we can create Custom Vision resources for each of these tasks, or we can create a single Cognitive Services resource and use it for either (or both).
 In this demo, we will create Custom Vision resources for training and prediction so that we can manage access and costs for these workloads separately.
 1.	In a new browser tab, open the Azure portal at https://portal.azure.com, and sign in using the Microsoft account associated with Azure subscription.
+
+![custvis](https://user-images.githubusercontent.com/91531884/175303039-3f04968e-a8f2-449d-a23b-985098cbee53.jpg)
+
+
 2.	Select the ＋ Create a resource button, search for custom vision, and create a Custom Vision resource with the following settings:
 o	Create options: Both
 o	Subscription: Azure subscription
@@ -64,6 +68,10 @@ o	Prediction pricing tier: F0
 To train an image classification model, we need to create a Custom Vision project based on training resource. To do this, we will use the Custom Vision portal.
 1.	In Visual Studio Code, view the training images in the Anti-Garbage-Childrens-Game\training-images folder where we cloned the repository. This folder contains subfolders of cardborard,glass,metal,paper,plastic and trash images.
 2.	In a new browser tab, open the Custom Vision portal at https://customvision.ai. If prompted, sign in using the Microsoft account associated with Azure subscription and agree to the terms of service.
+
+![createcustvis](https://user-images.githubusercontent.com/91531884/175303705-e523bb5e-c3b9-4df1-a81a-4255079eab1d.jpg)
+
+
 3.	In the Custom Vision portal, create a new project with the following settings:
 o	Name: Classify Garbage
 o	Description: Image classification for Garbage
@@ -79,6 +87,9 @@ o	Domains: General
  
 5.	Repeat the previous step to upload the images in the glass folder with the tag glass, and same with other folders too.
 6.	Explore the images we have uploaded in the Custom Vision project - there should be 15 images of each class, like this:
+
+![exploreimages](https://user-images.githubusercontent.com/91531884/175303884-6549bc8b-094b-4028-9dd0-e33c66ba8f4d.jpg)
+
  
 7.	In the Custom Vision project, above the images, click Train to train a classification model using the tagged images. Select the Quick Training option, and then wait for the training iteration to complete.
 8.	When the model iteration has been trained, review the Precision, Recall, and AP performance metrics - these measure the prediction accuracy of the classification model, and should all be high.The performance metrics are based on a probability threshold of 50% for each prediction (in other words, if the model calculates a 50% or higher probability that an image is of a particular class, then that class is predicted). We can adjust this at the top-left of the page.
@@ -89,6 +100,9 @@ Now that we've trained the model, we can test it.
 1.	Above the performance metrics, click Quick Test.
 2.	Select browse lov=cal files or insert image url.
 3.	View the predictions returned by model - the probability score for cardboard should be the highest, like this:
+
+![qcktst](https://user-images.githubusercontent.com/91531884/175304444-ff4a35d1-a851-4b37-aa1c-369bc15f0575.jpg)
+
  
 4.	Close the Quick Test window.
 
@@ -105,10 +119,21 @@ The project we have created has been assigned a unique identifier, which we will
 1.	In Visual Studio Code, in the Explorer pane, browse to the Anti-Garbage-Childrens-Game folder and expand the C-Sharp.
 2.	Right-click the train-classifier folder and open an integrated terminal. Then install the Custom Vision Training package by running command "dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Training --version 2.0.0"
 
+![custtraindn](https://user-images.githubusercontent.com/91531884/175307536-c8e986af-ceb9-4db8-906b-16244b5d14bc.jpg)
+
+
 3.	View the contents of the train-classifier folder, and note that it contains a file for configuration settings: "appsettings.json"
+
+![jsontrain](https://user-images.githubusercontent.com/91531884/175305331-f9d01159-313c-444b-b760-509e2bd44adc.jpg)
+
 
 Open the configuration file and update the configuration values it contains to reflect the endpoint and key for Custom Vision training resource, and the project ID for the classification project we created previously. Save changes.
 4.	Note that the train-classifier folder contains a code file for the client application: "Program.cs"
+
+![trainc1 1](https://user-images.githubusercontent.com/91531884/175305507-51f9c6c9-511d-4369-a0dd-ce6d09085938.jpg)
+![trainc1 2](https://user-images.githubusercontent.com/91531884/175305703-0738cb87-d406-46f6-b64b-342828295a3a.jpg)
+![trainc1 3](https://user-images.githubusercontent.com/91531884/175305834-7c2361e4-8301-4ae7-896b-1120819d0472.jpg)
+
 
 Open the code file and review the code it contains, noting the following details:
 o	Namespaces from the package we installed are imported
@@ -123,6 +148,10 @@ o	The Train_Model function creates a new training iteration for the project and 
 7)Publish the image classification model
 
 Now we're ready to publish trained model so that it can be used from a client application.
+
+![pubmod](https://user-images.githubusercontent.com/91531884/175306227-daf344ff-18f0-441d-a26d-4f3aa422dd6f.jpg)
+
+
 1.	In the Custom Vision portal, on the Performance page, click 🗸 Publish to publish the trained model with the following settings:
 o	Model name: Iteration4
 o	Prediction Resource: The prediction resource we created previously.
@@ -132,6 +161,10 @@ o	Prediction Resource: The prediction resource we created previously.
 
 8)Use the image classifier from a client application
 Now that we've published the image classification model, we can use it from a client application.
+
+![visionpredn](https://user-images.githubusercontent.com/91531884/175307017-f180e28d-4a17-4e99-94b0-c09ce76254f7.jpg)
+
+
 1.	In Visual Studio Code, in the Anti-Garbage-Childrens-Game, in the subfolder C-Sharp right-click the test-classifier folder and open an integrated terminal. Then enter the SDK-specific command to install the Custom Vision Prediction package: "dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction --version 2.0.0"
 2.	Expand the test-classifier folder to view the files it contains, which are used to implement a test client application for image classification model.
 3.	Open the configuration file for client application (appsettings.json) and update the configuration values it contains to reflect the endpoint and key for Custom Vision prediction resource, the project ID for the classification project, and the name of published model. Save changes.
