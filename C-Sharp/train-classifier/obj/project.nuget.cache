@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "X0J1+e+qKy5L9KFcK99ZFx5XQuW1KTBY+h2A4fUaHDfD/xb8qmD75InZ9RQ71onyp4Xjy/cHnDIC+vcgXmpo2g==",
+  "dgSpecHash": "tJ46/c+NynUNSH2YN2LKA9GdJ47E8ZcsOxxim7XfYLZf1xO6QwcTT5pJOw+knjMznJ0Dz4tv59L8OWNJcXaZ4g==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jayma\\AI-102-AIEngineer-master\\17-image-classification\\C-Sharp\\train-classifier\\train-classifier.csproj",
+  "projectFilePath": "C:\\Anti-Garbage-Childrens-Game\\C-Sharp\\train-classifier\\train-classifier.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jayma\\.nuget\\packages\\microsoft.azure.cognitiveservices.vision.customvision.training\\2.0.0\\microsoft.azure.cognitiveservices.vision.customvision.training.2.0.0.nupkg.sha512",
     "C:\\Users\\jayma\\.nuget\\packages\\microsoft.csharp\\4.3.0\\microsoft.csharp.4.3.0.nupkg.sha512",
@@ -99,10 +99,10 @@
     "C:\\Users\\jayma\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\jayma\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Users\\jayma\\.nuget\\packages\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Users\\jayma\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\jayma\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.26\\microsoft.netcore.app.host.win-x64.3.1.26.nupkg.sha512",
     "C:\\Users\\jayma\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\jayma\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\jayma\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\jayma\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\jayma\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.26\\microsoft.netcore.app.host.win-x64.3.1.26.nupkg.sha512"
   ],
   "logs": []
 }

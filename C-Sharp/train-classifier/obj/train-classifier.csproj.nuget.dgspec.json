@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jayma\\AI-102-AIEngineer-master\\17-image-classification\\C-Sharp\\train-classifier\\train-classifier.csproj": {}
+    "C:\\Anti-Garbage-Childrens-Game\\C-Sharp\\train-classifier\\train-classifier.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jayma\\AI-102-AIEngineer-master\\17-image-classification\\C-Sharp\\train-classifier\\train-classifier.csproj": {
+    "C:\\Anti-Garbage-Childrens-Game\\C-Sharp\\train-classifier\\train-classifier.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jayma\\AI-102-AIEngineer-master\\17-image-classification\\C-Sharp\\train-classifier\\train-classifier.csproj",
+        "projectUniqueName": "C:\\Anti-Garbage-Childrens-Game\\C-Sharp\\train-classifier\\train-classifier.csproj",
         "projectName": "train-classifier",
-        "projectPath": "C:\\Users\\jayma\\AI-102-AIEngineer-master\\17-image-classification\\C-Sharp\\train-classifier\\train-classifier.csproj",
+        "projectPath": "C:\\Anti-Garbage-Childrens-Game\\C-Sharp\\train-classifier\\train-classifier.csproj",
         "packagesPath": "C:\\Users\\jayma\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jayma\\AI-102-AIEngineer-master\\17-image-classification\\C-Sharp\\train-classifier\\obj\\",
+        "outputPath": "C:\\Anti-Garbage-Childrens-Game\\C-Sharp\\train-classifier\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\jayma\\AppData\\Roaming\\NuGet\\NuGet.Config"
