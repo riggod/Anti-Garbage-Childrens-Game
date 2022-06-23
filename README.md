@@ -9,9 +9,14 @@ Small garbage on road also causes pollution,so to clean pollution while enjoying
 
 This project is intended for the backend service to the Anti Garbage Childrens Game UI Applications of different platforms like for windows app,android app,web app.
 
-There are many azure services used in this porject:
+There are many azure services used in this project:
+
 1)Azure Virtual Machine
+
+![vm](https://user-images.githubusercontent.com/91531884/175309489-6a39b947-0d49-47c4-95e6-44875b2ee7bc.jpg)
+
 Here i created a windows 10 pro virtual machine to deploy my code and run it continuously on cloud with interruptions and i have accessed the vm by rdp file.
+
 2)In Azure AI/ML :-Azure Custom Vision
 By using this service i trained machine learning models
 here i used both Training and Prediction service
@@ -22,6 +27,9 @@ The large storage is needed for the storage of various garbage images.
 1)The project is created in c# lanaguage and .net framework
 
 2)The project contains directories namely C-Sharp and training-images
+
+![dir](https://user-images.githubusercontent.com/91531884/175309958-24265152-2bbc-4261-abca-e979436dd88b.jpg)
+
 a)C-Sharp:This directory has two sub-directories namely train-classifier and test-classifier where in train-classifier there is appsettings.json file which is used to store the ProjectID,TrainingKey and TrainingEndpoint from the custom vision service of model and also the program code and training images according to categories.Later in test-classifier there is appsettings.json file which is used to store the ProjectID,PredictionKey,PredictionEndpoint and ModelName and also the program code and the test-images folder where the images from Iot enabled toys will be stored.
 b)training-images:It is a directory which hs large amounts of garbage images according to categories which can be added to train images folder for more learning of machine.
 
@@ -141,6 +149,10 @@ o	The Main function retrieves the configuration settings, and uses the key and e
 o	The Upload_Images function retrieves the tags that are defined in the Custom Vision project and then uploads image files from correspondingly named folders to the project, assigning the appropriate tag ID.
 o	The Train_Model function creates a new training iteration for the project and waits for training to complete.
 5.	Return the integrated terminal for the train-classifier folder, and enter the following command to run the program: "dotnet run"
+
+![trainres](https://user-images.githubusercontent.com/91531884/175312247-a46253e0-b33a-432c-87c2-af563f462338.jpg)
+
+
 6.	Wait for the program to end. Then return to browser and view the Training Images page for project in the Custom Vision portal.
 7.	Verify that some new tagged images have been added to the project. Then view the Performance page and verify that a new iteration has been created.
 
@@ -167,12 +179,24 @@ Now that we've published the image classification model, we can use it from a cl
 
 1.	In Visual Studio Code, in the Anti-Garbage-Childrens-Game, in the subfolder C-Sharp right-click the test-classifier folder and open an integrated terminal. Then enter the SDK-specific command to install the Custom Vision Prediction package: "dotnet add package Microsoft.Azure.CognitiveServices.Vision.CustomVision.Prediction --version 2.0.0"
 2.	Expand the test-classifier folder to view the files it contains, which are used to implement a test client application for image classification model.
+
+![visionpredn](https://user-images.githubusercontent.com/91531884/175310894-15ba3a02-42fe-4d58-bc26-e0ee24c0dbc5.jpg)
+
+
 3.	Open the configuration file for client application (appsettings.json) and update the configuration values it contains to reflect the endpoint and key for Custom Vision prediction resource, the project ID for the classification project, and the name of published model. Save changes.
-4.	Open the code file for client application (Program.cs for C#) and review the code it contains, noting the following details:
+4.	Open the code file for client application (Program.cs) and review the code it contains, noting the following details:
+
+![testc1 1](https://user-images.githubusercontent.com/91531884/175311229-00463b74-1ecc-4ae7-a415-832d64e5c724.jpg)
+![testc1 2](https://user-images.githubusercontent.com/91531884/175311334-04927808-38f5-4a9d-854c-4bea3bf8d896.jpg)
+
+
 o	Namespaces from the package we installed are imported
 o	The Main function retrieves the configuration settings, and uses the key and endpoint to create an authenticated CustomVisionPredictionClient.
 o	The prediction client object is used to predict a class for each image in the test-images folder, specifying the project ID and model name for each request. Each prediction includes a probability for each possible class, and only predicted tags with a probability greater than 50% are displayed.
 5.	Return the integrated terminal for the test-classifier folder, and enter the SDK-specific command to run the program: "dotnet run"
+
+![restest](https://user-images.githubusercontent.com/91531884/175311565-cda02ab4-47a1-4155-a3b6-542621d10e63.jpg)
+
 6.	View the label (tag) and probability scores for each prediction. We can view the images in the test-images folder to verify that the model has classified them correctly.
 
 +Thank you for your precious time for reading this readme 
