@@ -4,7 +4,9 @@
 +About Anti Garbage Childrens Game:
 Small garbage on road also causes pollution,so to clean pollution while enjoying the process childern can use toy cars,drones,etc to collect garbage.First of all using Azure AI/ML the garbage is scanned through the cameras of toy cars and drones then the images will go in backed service to test folders for prediction later on children/user can collect the garbage by small robotic arms if available or manually and place the garbage in bin cans.This way children will get awareness about climate and may get fun.
 
+
 +Video URL for demo of project with implementation:https://youtu.be/je6CRV4krf4
+
 +Project code URL:https://github.com/riggod/Anti-Garbage-Childrens-Game
 
 
