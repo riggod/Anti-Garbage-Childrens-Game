@@ -15,7 +15,7 @@ There are many azure services used in this project:
 
 ![vm](https://user-images.githubusercontent.com/91531884/175309489-6a39b947-0d49-47c4-95e6-44875b2ee7bc.jpg)
 
-Here i created a windows 10 pro virtual machine to deploy my code and run it continuously on cloud with interruptions and i have accessed the vm by rdp file.
+Here i created a windows 10 pro virtual machine to deploy my code and run it continuously on cloud without power interruptions and i have accessed the vm by .rdp file.
 
 2)In Azure AI/ML :-Azure Custom Vision
 By using this service i trained machine learning models
@@ -45,7 +45,7 @@ Classify Images with Custom Vision
 In this demo, i will use the Custom Vision service to train an image classification model that can identify six classes of garbage (cardborard,glass,metal,paper,plastic,trash).
 
 
-1)Clone the repository
+1)Clone the repository or download zip file of code
 
 1.	Start Visual Studio Code.
 2.	Open the palette and run a Git: Clone command to clone the https://github.com/riggod/Anti-Garbage-Childrens-Game repository to a local folder.
@@ -107,7 +107,8 @@ o	Domains: General
 Now that we've trained the model, we can test it.
 1.	Above the performance metrics, click Quick Test.
 2.	Select browse lov=cal files or insert image url.
-3.	View the predictions returned by model - the probability score for cardboard should be the highest, like this:
+3.	View the predictions 
+ed by model - the probability score for cardboard should be the highest, like this:
 
 ![qcktst](https://user-images.githubusercontent.com/91531884/175304444-ff4a35d1-a851-4b37-aa1c-369bc15f0575.jpg)
 
@@ -149,7 +150,7 @@ o	The Main function retrieves the configuration settings, and uses the key and e
 o	The Upload_Images function retrieves the tags that are defined in the Custom Vision project and then uploads image files from correspondingly named folders to the project, assigning the appropriate tag ID.
 o	The Train_Model function creates a new training iteration for the project and waits for training to complete.
 
-5.	Return the integrated terminal for the train-classifier folder, and enter the following command to run the program: "dotnet run"
+5.	Return to the integrated terminal for the train-classifier folder, and enter the following command to run the program: "dotnet run"
 
 ![trainres](https://user-images.githubusercontent.com/91531884/175312247-a46253e0-b33a-432c-87c2-af563f462338.jpg)
 
@@ -195,7 +196,7 @@ o	Namespaces from the package we installed are imported
 o	The Main function retrieves the configuration settings, and uses the key and endpoint to create an authenticated CustomVisionPredictionClient.
 o	The prediction client object is used to predict a class for each image in the test-images folder, specifying the project ID and model name for each request. Each prediction includes a probability for each possible class, and only predicted tags with a probability greater than 50% are displayed.
 
-5.	Return the integrated terminal for the test-classifier folder, and enter the SDK-specific command to run the program: "dotnet run"
+5.	Return to the integrated terminal for the test-classifier folder, and enter the SDK-specific command to run the program: "dotnet run"
 
 ![restest](https://user-images.githubusercontent.com/91531884/175311565-cda02ab4-47a1-4155-a3b6-542621d10e63.jpg)
 
